@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_core"
+    app:startDestination="@id/clientResponses">
+
+    <fragment
+        android:id="@+id/clientFavorites"
+        android:name="ru.bestapps.job.presentation.fragments.ClientFavorites"
+        android:label="fragment_client_favorites"
+        tools:layout="@layout/fragment_client_favorites" />
+    <fragment
+        android:id="@+id/clientMessages"
+        android:name="ru.bestapps.job.presentation.fragments.ClientMessages"
+        android:label="fragment_client_messages"
+        tools:layout="@layout/fragment_client_messages" />
+    <fragment
+        android:id="@+id/clientProfile"
+        android:name="ru.bestapps.job.presentation.fragments.ClientProfile"
+        android:label="fragment_client_profile"
+        tools:layout="@layout/fragment_client_profile" />
+    <fragment
+        android:id="@+id/clientResponses"
+        android:name="ru.bestapps.job.presentation.fragments.ClientResponses"
+        android:label="fragment_client_responses"
+        tools:layout="@layout/fragment_client_responses" />
+    <fragment
+        android:id="@+id/clientSearch"
+        android:name="ru.bestapps.job.presentation.fragments.ClientSearch"
+        android:label="fragment_client_search"
+        tools:layout="@layout/fragment_client_search" >
+        <action
+            android:id="@+id/action_clientSearch_to_vacancyPage2"
+            app:destination="@id/vacancyPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacancyPage2"
+        android:name="ru.bestapps.job.presentation.fragments.VacancyPage"
+        android:label="fragment_vacancy_page"
+        tools:layout="@layout/fragment_vacancy_page" />
+</navigation>

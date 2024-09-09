@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/clientSearch"
+        android:title="@string/search"
+        android:icon="@drawable/search" />
+    <item
+
+        android:id="@+id/clientFavorites"
+        android:title="@string/favorites"
+        android:icon="@drawable/favorites" />
+    <item
+        android:id="@+id/clientResponses"
+        android:title="Отклики"
+        android:icon="@drawable/responses"/>
+    <item
+        android:id="@+id/clientMessages"
+        android:title="Сообщения"
+        android:icon="@drawable/messages" />
+    <item
+        android:id="@+id/clientProfile"
+        android:title="Профиль"
+        android:icon="@drawable/profile_button_nav" />
+
+
+</menu>

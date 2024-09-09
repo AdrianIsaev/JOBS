@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shadows"
+    tools:context=".presentation.activity.MainActivity">
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/login_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вход в личный кабинет"
+        style="@style/Title2"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        />
+    <TextView
+        android:id="@+id/nekostilaficha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_text_view"
+        android:layout_marginTop="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Карточка для "Поиск работы" -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search_job"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey_1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/card_search_employers"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/searchJobsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Поиск работы"
+                style="@style/Title3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/searchJobsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                style="@style/Text1"
+                android:textColor="@color/white"
+                android:drawablePadding="6dp"
+                android:includeFontPadding="false"
+                android:drawableStart="@drawable/responses"
+                app:layout_constraintTop_toBottomOf="@+id/searchJobsTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="Электронная почта или телефон"
+                android:paddingEnd="8dp"
+                android:drawableEnd="@drawable/transparent_edit_text_canceller"
+                android:textColorHint="@color/grey_3"
+                android:background="@drawable/search_field"
+                android:layout_marginTop="8dp"
+
+                />
+            <TextView
+                android:id="@+id/error_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/buttonContinue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchJobsEditText"
+                style="@style/Text1"
+                android:textColor="@color/grey_1"
+                android:text="Вы ввели неверный e-mail"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonContinue"
+                style="@style/ButtonText2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_eight_r"
+                android:text="Продолжить"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/buttonLoginWithPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/error_info_text_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintTop_toBottomOf="@+id/error_info_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buttonContinue"
+                android:id="@+id/buttonLoginWithPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAllCaps="false"
+                android:background="@android:color/transparent"
+                style="@style/ButtonText2"
+
+                android:text="Войти с паролем"
+                android:textColor="@color/blue" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Карточка для "Поиск сотрудников" -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search_employers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey_1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nekostilaficha"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/search_employee_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Поиск сотрудников"
+                style="@style/Title3"
+                android:textColor="@color/white"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/search_employee_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/add_publications_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Размещение вакансий и доступ к базе резюме"
+                style="@style/Text1"
+                android:textColor="@color/white"
+                android:layout_marginTop="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintTop_toBottomOf="@id/add_publications_text_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/search_employee_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green"
+                android:background="@drawable/button_fifty_r"
+                android:text="Я ищу сотрудников"
+                style="@style/ButtonText2"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:itemIconTint="@drawable/bottom_navigation_background"
+        app:itemTextColor="@drawable/bottom_navigation_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_navigation"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

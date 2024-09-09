@@ -1,0 +1,104 @@
+<!-- res/layout/dialog_resume.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/shadows"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:src="@drawable/main" />
+
+    <TextView
+        android:id="@+id/respond_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Резюме для отклика"
+        style="@style/Text1"
+        android:textColor="@color/grey_3"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view"
+/>
+
+    <TextView
+        android:id="@+id/profession_text_view"
+        android:textColor="@color/white"
+        style="@style/Title3"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_view"
+        app:layout_constraintTop_toBottomOf="@id/respond_text_view"
+        android:text="UI/UX дизайнер" />
+    <View
+        android:id="@+id/under_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_1"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+
+        app:layout_constraintTop_toBottomOf="@id/image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="5dp" />
+    <EditText
+        android:id="@+id/send_letter_edit_text"
+        android:textColor="@color/white"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:paddingStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/grey_3"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/under_line_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_submit"
+        android:hint="Ваше сопроводительное письмо"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="64dp"/>
+    <TextView
+        android:id="@+id/add_letter_text_view"
+        android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/under_line_view"
+        android:text="Добавить сопроводительное"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_submit"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Откликнуться"
+        android:textAllCaps="false"
+        style="@style/ButtonText1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_eight_r"
+        android:backgroundTint="@color/green"
+        android:layout_margin="8dp"
+        android:textColor="@android:color/white"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>

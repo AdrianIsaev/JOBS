@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buffer"
+    app:startDestination="@id/buffer2">
+
+    <fragment
+        android:id="@+id/buffer2"
+        android:name="ru.bestapps.job.presentation.fragments.Buffer"
+        android:label="fragment_buffer"
+        tools:layout="@layout/fragment_buffer" >
+        <action
+            android:id="@+id/action_buffer2_to_unregisteredMain2"
+            app:destination="@id/unregisteredMain2" />
+        <action
+            android:id="@+id/action_buffer2_to_check"
+            app:destination="@id/check" />
+    </fragment>
+    <fragment
+        android:id="@+id/unregisteredMain2"
+        android:name="ru.bestapps.job.presentation.fragments.UnregisteredMain"
+        android:label="fragment_unregistered_main"
+        tools:layout="@layout/fragment_unregistered_main" >
+        <action
+            android:id="@+id/action_unregisteredMain2_to_vacancyPage"
+            app:destination="@id/vacancyPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/check"
+        android:name="ru.bestapps.job.presentation.fragments.Check"
+        android:label="fragment_check"
+        tools:layout="@layout/fragment_check" >
+        <action
+            android:id="@+id/action_check_to_unregisteredMain2"
+            app:destination="@id/unregisteredMain2" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacancyPage"
+        android:name="ru.bestapps.job.presentation.fragments.VacancyPage"
+        android:label="fragment_vacancy_page"
+        tools:layout="@layout/fragment_vacancy_page" />
+
+</navigation>

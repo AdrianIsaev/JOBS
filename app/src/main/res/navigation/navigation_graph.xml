@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/unregisteredMain">
+
+    <fragment
+        android:id="@+id/unregisteredMain"
+        android:name="ru.bestapps.job.presentation.fragments.UnregisteredMain"
+        android:label="fragment_unregistered_main"
+        tools:layout="@layout/fragment_unregistered_main" >
+        <action
+            android:id="@+id/action_unregisteredMain_to_navigation_core"
+            app:destination="@id/navigation_core" />
+    </fragment>
+    <include app:graph="@navigation/navigation_core" />
+    <fragment
+        android:id="@+id/clientFavorites2"
+        android:name="ru.bestapps.job.presentation.fragments.ClientFavorites"
+        android:label="fragment_client_favorites"
+        tools:layout="@layout/fragment_client_favorites" />
+    <fragment
+        android:id="@+id/clientMessages2"
+        android:name="ru.bestapps.job.presentation.fragments.ClientMessages"
+        android:label="fragment_client_messages"
+        tools:layout="@layout/fragment_client_messages" />
+    <fragment
+        android:id="@+id/clientProfile2"
+        android:name="ru.bestapps.job.presentation.fragments.ClientProfile"
+        android:label="fragment_client_profile"
+        tools:layout="@layout/fragment_client_profile" />
+    <fragment
+        android:id="@+id/clientResponses2"
+        android:name="ru.bestapps.job.presentation.fragments.ClientResponses"
+        android:label="fragment_client_responses"
+        tools:layout="@layout/fragment_client_responses" />
+    <fragment
+        android:id="@+id/clientSearch2"
+        android:name="ru.bestapps.job.presentation.fragments.ClientSearch"
+        android:label="fragment_client_search"
+        tools:layout="@layout/fragment_client_search" />
+</navigation>
